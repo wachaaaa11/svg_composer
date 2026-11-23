@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SVG Composer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><b>SVG Composer</b><span>compose illustrations from the original components</span></div>
+  <div class="hbtns">
+    <button id="undo" title="Undo (Ctrl+Z)">↶ Undo</button>
+    <button id="redo" title="Redo (Ctrl+Shift+Z)">↷ Redo</button>
+    <button id="clear">Clear</button>
+    <button id="export" class="primary">Export SVG</button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ LEFT: compose + settings ============ -->
+  <aside id="left">
+    <section>
+      <h2>1 · Compose</h2>
+      <div class="tabs" id="modeTabs">
+        <button class="on" data-tab="meta">Metaphor / headline</button>
+        <button data-tab="names">Component names</button>
+      </div>
+      <div id="tab-meta">
+        <textarea id="metaText" rows="3" placeholder="e.g. “Teamwork is solving a puzzle together” or «Безопасные платежи в приложении»"></textarea>
+        <div class="chips" id="examples"></div>
+        <div class="row"><label>Objects <select id="maxObj"><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+          <label>Background object <select id="bgMode"><option value="auto">auto</option><option value="none">none</option></select></label></div>
+        <details><summary>AI interpretation (optional)</summary>
+          <p class="hint">Sends only your text + the list of library ids to the Anthropic API from your browser. The model can only choose existing ids; it cannot create visuals. Key stays in this tab.</p>
+          <input id="aiKey" type="password" placeholder="Anthropic API key (sk-ant-…)" autocomplete="off">
+          <label class="inline"><input type="checkbox" id="aiOn"> use AI instead of the local lexicon</label>
+        </details>
+      </div>
+      <div id="tab-names" hidden>
+        <textarea id="namesText" rows="3" placeholder="e.g. headphones, lamp, phone, pen   (RU or EN; 2x coin; фон: книга)"></textarea>
+        <label>Background object (optional) <select id="namesBg"><option value="">none</option></select></label>
+      </div>
+      <button id="compose" class="primary wide">Compose automatically</button>
+      <div id="report" class="report" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <h2>2 · Layout</h2>
+      <div class="row">
+        <label>Style <select id="layoutMode"><option value="assembled">Assembled</option><option value="offset">Offset</option><option value="headline">Headline-safe</option></select></label>
+        <button id="shuffle" title="Try another arrangement">⟳ Shuffle</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>3 · Output</h2>
+      <div class="row">
+        <label>Format <select id="preset">
+          <option value="1200x630">1200 × 630 (original)</option><option value="1080x1080">1080 × 1080</option><option value="1920x1080">1920 × 1080</option>
+          <option value="1080x1350">1080 × 1350</option><option value="1080x1920">1080 × 1920</option><option value="custom">Custom…</option></select></label>
+      </div>
+      <div class="row" id="customSize" hidden><input id="cw" type="number" min="100" max="8000" value="1200"> × <input id="ch" type="number" min="100" max="8000" value="630"><button id="applySize">Apply</button></div>
+      <div class="row">
+        <label>Detail size <select id="sizeMode"><option value="auto">Auto</option><option value="S">S</option><option value="L">L</option></select></label>
+        <span id="sizeBadge" class="badge">S</span>
+      </div>
+      <div class="row"><label>Canvas fill <select id="canvasBg"><option value="bg0">scheme light</option><option value="bg1">scheme mid</option><option value="white">white</option><option value="none">transparent</option></select></label></div>
+    </section>
+
+    <section>
+      <h2>4 · Colour scheme</h2>
+      <div id="palettes" class="palettes"></div>
+      <details open><summary>Edit / upload custom palette</summary>
+        <div id="picker" class="picker"></div>
+        <div class="row"><label class="filebtn">Upload palette<input type="file" id="palFile" accept=".json,.svg,.txt,.css,.gpl,.hex"></label><button id="palTpl">Template</button></div>
+        <p class="hint">JSON, an SVG swatch sheet (2×4 rects, like the original), or text with hex codes in role order. Background-object colours (left column) go to monochrome objects; object colours (right column) never do.</p>
+        <div id="palMsg" class="hint"></div>
+      </details>
+    </section>
+  </aside>
+
+  <!-- ============ CENTRE: canvas ============ -->
+  <section id="stageWrap">
+    <div id="stage"><svg id="canvas" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="status" id="status">Click an object to select · drag to move · handles rotate / scale · Del deletes · Ctrl+D duplicates · [ ] change stacking</div>
+  </section>
+
+  <!-- ============ RIGHT: library + properties + layers ============ -->
+  <aside id="right">
+    <section>
+      <h2>Library <small id="libInfo"></small></h2>
+      <div class="tabs" id="libTabs"><button class="on" data-role="main">Main (colour)</button><button data-role="background">Background (mono)</button></div>
+      <div id="libGrid" class="libgrid"></div>
+      <p class="hint">Click or drag onto the canvas.</p>
+    </section>
+    <section id="props" hidden>
+      <h2>Selected: <span id="selName"></span></h2>
+      <div class="row"><label>Rotation° <input id="pRot" type="number" step="1"></label><label>Scale % <input id="pScale" type="number" step="1" min="1"></label></div>
+      <div class="btnrow">
+        <button id="bDup">Duplicate</button><button id="bDel">Delete</button>
+        <button id="bFront">To front</button><button id="bFwd">Forward</button><button id="bBwd">Backward</button><button id="bBack">To back</button>
+      </div>
+    </section>
+    <section>
+      <h2>Layers <small>(top first)</small></h2>
+      <ol id="layers" class="layers"></ol>
+    </section>
+  </aside>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

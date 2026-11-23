@@ -1,0 +1,894 @@
+{
+ "version": 1,
+ "source": "Размер S.svg / Размер L.svg",
+ "palettes": [
+  {
+   "background": [
+    "#D7CDF5",
+    "#AA9BF0",
+    "#7864D7"
+   ],
+   "objects": [
+    "#F9ECB0",
+    "#F9A3AA",
+    "#FFE3E1"
+   ],
+   "black": "#181817",
+   "white": "#FFFFFF"
+  },
+  {
+   "background": [
+    "#FDD7B9",
+    "#FAC896",
+    "#D27532"
+   ],
+   "objects": [
+    "#F9ECB0",
+    "#80DADA",
+    "#BEEBEB"
+   ],
+   "black": "#181817",
+   "white": "#FFFFFF"
+  },
+  {
+   "background": [
+    "#BEEBEB",
+    "#80DADA",
+    "#5ABEBE"
+   ],
+   "objects": [
+    "#FFD4F2",
+    "#6D7BFC",
+    "#B6C6FE"
+   ],
+   "black": "#181817",
+   "white": "#FFFFFF"
+  }
+ ],
+ "components": [
+  {
+   "id": "S/main/open_book",
+   "object": "open_book",
+   "name_ru": "Открытая книга",
+   "name_en": "Open book",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/open_book.svg",
+   "bbox": [
+    268.389,
+    2060.39,
+    722.946,
+    488.332
+   ],
+   "paths": 51,
+   "colors": {
+    "WHITE": 13,
+    "#181817": 9,
+    "#F9A3AA": 3,
+    "#F9ECB0": 26
+   }
+  },
+  {
+   "id": "S/main/smartphone",
+   "object": "smartphone",
+   "name_ru": "Смартфон",
+   "name_en": "Smartphone",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/smartphone.svg",
+   "bbox": [
+    1294.232,
+    2253.164,
+    398.262,
+    230.836
+   ],
+   "paths": 96,
+   "colors": {
+    "#181817": 56,
+    "WHITE": 4,
+    "#F9ECB0": 1,
+    "#7864D7": 34,
+    "#D7CDF5": 1
+   }
+  },
+  {
+   "id": "S/main/puzzle",
+   "object": "puzzle",
+   "name_ru": "Детали пазла",
+   "name_en": "Puzzle pieces",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/puzzle.svg",
+   "bbox": [
+    1925.339,
+    2284.12,
+    272.082,
+    156.764
+   ],
+   "paths": 57,
+   "colors": {
+    "#181817": 22,
+    "#F9ECB0": 2,
+    "WHITE": 26,
+    "#F9A3AA": 4,
+    "#D7CDF5": 3
+   }
+  },
+  {
+   "id": "S/main/coin",
+   "object": "coin",
+   "name_ru": "Монета",
+   "name_en": "Coin",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/coin.svg",
+   "bbox": [
+    2498.226,
+    2339.802,
+    152.395,
+    100.198
+   ],
+   "paths": 130,
+   "colors": {
+    "WHITE": 13,
+    "#F9ECB0": 24,
+    "#181817": 93
+   }
+  },
+  {
+   "id": "S/main/headphones",
+   "object": "headphones",
+   "name_ru": "Наушники",
+   "name_en": "Headphones",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/headphones.svg",
+   "bbox": [
+    374.859,
+    2935.98,
+    444.075,
+    345.77
+   ],
+   "paths": 79,
+   "colors": {
+    "#181817": 19,
+    "WHITE": 13,
+    "#D7CDF5": 47
+   }
+  },
+  {
+   "id": "S/main/desk_lamp",
+   "object": "desk_lamp",
+   "name_ru": "Настольная лампа",
+   "name_en": "Desk lamp",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/desk_lamp.svg",
+   "bbox": [
+    1192.002,
+    2818.268,
+    472.974,
+    564.489
+   ],
+   "paths": 27,
+   "colors": {
+    "#181817": 4,
+    "WHITE": 10,
+    "#D7CDF5": 6,
+    "#F9ECB0": 5,
+    "#F9A3AA": 2
+   }
+  },
+  {
+   "id": "S/main/tulips",
+   "object": "tulips",
+   "name_ru": "Тюльпаны в вазе",
+   "name_en": "Tulips in a vase",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/tulips.svg",
+   "bbox": [
+    1918.909,
+    2948.585,
+    323.269,
+    408.945
+   ],
+   "paths": 131,
+   "colors": {
+    "#181817": 26,
+    "WHITE": 34,
+    "#F9ECB0": 30,
+    "#AA9BF0": 18,
+    "#F9A3AA": 23
+   }
+  },
+  {
+   "id": "S/main/wallet",
+   "object": "wallet",
+   "name_ru": "Кошелёк",
+   "name_en": "Wallet",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/wallet.svg",
+   "bbox": [
+    2399.499,
+    3187.646,
+    315.207,
+    198.154
+   ],
+   "paths": 83,
+   "colors": {
+    "#D7CDF5": 16,
+    "#181817": 54,
+    "#F9ECB0": 8,
+    "WHITE": 5
+   }
+  },
+  {
+   "id": "S/main/folder",
+   "object": "folder",
+   "name_ru": "Папка",
+   "name_en": "Folder",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/folder.svg",
+   "bbox": [
+    261.27,
+    3741.491,
+    620.309,
+    329.294
+   ],
+   "paths": 20,
+   "colors": {
+    "#F9ECB0": 11,
+    "#181817": 3,
+    "WHITE": 6
+   }
+  },
+  {
+   "id": "S/main/pen",
+   "object": "pen",
+   "name_ru": "Ручка",
+   "name_en": "Pen",
+   "size": "S",
+   "role": "main",
+   "file": "library/S/main/pen.svg",
+   "bbox": [
+    1298.058,
+    3857.536,
+    254.209,
+    142.704
+   ],
+   "paths": 24,
+   "colors": {
+    "#181817": 7,
+    "WHITE": 16,
+    "#F9A3AA": 1
+   }
+  },
+  {
+   "id": "S/background/open_book",
+   "object": "open_book",
+   "name_ru": "Открытая книга",
+   "name_en": "Open book",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/open_book.svg",
+   "bbox": [
+    268.389,
+    5161.8,
+    722.946,
+    488.327
+   ],
+   "paths": 54,
+   "colors": {
+    "#D7CDF5": 42,
+    "#7864D7": 12
+   }
+  },
+  {
+   "id": "S/background/smartphone",
+   "object": "smartphone",
+   "name_ru": "Смартфон",
+   "name_en": "Smartphone",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/smartphone.svg",
+   "bbox": [
+    1294.232,
+    5354.574,
+    398.262,
+    230.836
+   ],
+   "paths": 155,
+   "colors": {
+    "#7864D7": 93,
+    "#D7CDF5": 62
+   }
+  },
+  {
+   "id": "S/background/puzzle",
+   "object": "puzzle",
+   "name_ru": "Детали пазла",
+   "name_en": "Puzzle pieces",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/puzzle.svg",
+   "bbox": [
+    1925.339,
+    5385.52,
+    272.082,
+    156.768
+   ],
+   "paths": 57,
+   "colors": {
+    "#7864D7": 22,
+    "#D7CDF5": 35
+   }
+  },
+  {
+   "id": "S/background/coin",
+   "object": "coin",
+   "name_ru": "Монета",
+   "name_en": "Coin",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/coin.svg",
+   "bbox": [
+    2498.229,
+    5441.204,
+    152.393,
+    100.206
+   ],
+   "paths": 136,
+   "colors": {
+    "#D7CDF5": 38,
+    "#7864D7": 98
+   }
+  },
+  {
+   "id": "S/background/headphones",
+   "object": "headphones",
+   "name_ru": "Наушники",
+   "name_en": "Headphones",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/headphones.svg",
+   "bbox": [
+    374.859,
+    6037.39,
+    444.075,
+    345.77
+   ],
+   "paths": 84,
+   "colors": {
+    "#7864D7": 20,
+    "#D7CDF5": 64
+   }
+  },
+  {
+   "id": "S/background/desk_lamp",
+   "object": "desk_lamp",
+   "name_ru": "Настольная лампа",
+   "name_en": "Desk lamp",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/desk_lamp.svg",
+   "bbox": [
+    1192.002,
+    5919.673,
+    472.974,
+    564.494
+   ],
+   "paths": 27,
+   "colors": {
+    "#7864D7": 4,
+    "#D7CDF5": 23
+   }
+  },
+  {
+   "id": "S/background/tulips",
+   "object": "tulips",
+   "name_ru": "Тюльпаны в вазе",
+   "name_en": "Tulips in a vase",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/tulips.svg",
+   "bbox": [
+    1891.269,
+    6051.979,
+    323.268,
+    408.947
+   ],
+   "paths": 131,
+   "colors": {
+    "#7864D7": 26,
+    "#D7CDF5": 105
+   }
+  },
+  {
+   "id": "S/background/wallet",
+   "object": "wallet",
+   "name_ru": "Кошелёк",
+   "name_en": "Wallet",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/wallet.svg",
+   "bbox": [
+    2399.499,
+    6289.054,
+    315.207,
+    198.156
+   ],
+   "paths": 86,
+   "colors": {
+    "#D7CDF5": 31,
+    "#7864D7": 55
+   }
+  },
+  {
+   "id": "S/background/folder",
+   "object": "folder",
+   "name_ru": "Папка",
+   "name_en": "Folder",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/folder.svg",
+   "bbox": [
+    261.27,
+    6842.898,
+    620.309,
+    329.297
+   ],
+   "paths": 22,
+   "colors": {
+    "#D7CDF5": 18,
+    "#7864D7": 4
+   }
+  },
+  {
+   "id": "S/background/pen",
+   "object": "pen",
+   "name_ru": "Ручка",
+   "name_en": "Pen",
+   "size": "S",
+   "role": "background",
+   "file": "library/S/background/pen.svg",
+   "bbox": [
+    1298.058,
+    6958.94,
+    254.209,
+    142.701
+   ],
+   "paths": 24,
+   "colors": {
+    "#7864D7": 7,
+    "#D7CDF5": 17
+   }
+  },
+  {
+   "id": "L/main/open_book",
+   "object": "open_book",
+   "name_ru": "Открытая книга",
+   "name_en": "Open book",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/open_book.svg",
+   "bbox": [
+    391.644,
+    3467.37,
+    1445.894,
+    976.667
+   ],
+   "paths": 54,
+   "colors": {
+    "WHITE": 13,
+    "#181817": 12,
+    "#F9A3AA": 3,
+    "#FFE3E1": 14,
+    "#F9ECB0": 12
+   }
+  },
+  {
+   "id": "L/main/smartphone",
+   "object": "smartphone",
+   "name_ru": "Смартфон",
+   "name_en": "Smartphone",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/smartphone.svg",
+   "bbox": [
+    2038.578,
+    3718.638,
+    796.53,
+    461.672
+   ],
+   "paths": 155,
+   "colors": {
+    "#181817": 59,
+    "WHITE": 5,
+    "#F9ECB0": 7,
+    "#D7CDF5": 50,
+    "#7864D7": 34
+   }
+  },
+  {
+   "id": "L/main/puzzle",
+   "object": "puzzle",
+   "name_ru": "Детали пазла",
+   "name_en": "Puzzle pieces",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/puzzle.svg",
+   "bbox": [
+    3100.244,
+    3827.74,
+    544.164,
+    313.536
+   ],
+   "paths": 57,
+   "colors": {
+    "#181817": 22,
+    "#F9ECB0": 2,
+    "WHITE": 29,
+    "#F9A3AA": 4
+   }
+  },
+  {
+   "id": "L/main/coin",
+   "object": "coin",
+   "name_ru": "Монета",
+   "name_en": "Coin",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/coin.svg",
+   "bbox": [
+    4005.301,
+    3945.818,
+    286.676,
+    188.502
+   ],
+   "paths": 136,
+   "colors": {
+    "WHITE": 14,
+    "#F9ECB0": 24,
+    "#181817": 98
+   }
+  },
+  {
+   "id": "L/main/headphones",
+   "object": "headphones",
+   "name_ru": "Наушники",
+   "name_en": "Headphones",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/headphones.svg",
+   "bbox": [
+    470.023,
+    4803.09,
+    888.152,
+    691.539
+   ],
+   "paths": 84,
+   "colors": {
+    "#181817": 21,
+    "WHITE": 13,
+    "#F9ECB0": 3,
+    "#D7CDF5": 47
+   }
+  },
+  {
+   "id": "L/main/desk_lamp",
+   "object": "desk_lamp",
+   "name_ru": "Настольная лампа",
+   "name_en": "Desk lamp",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/desk_lamp.svg",
+   "bbox": [
+    1822.23,
+    4438.752,
+    945.945,
+    1128.988
+   ],
+   "paths": 27,
+   "colors": {
+    "#181817": 4,
+    "WHITE": 10,
+    "#D7CDF5": 6,
+    "#F9ECB0": 5,
+    "#F9A3AA": 2
+   }
+  },
+  {
+   "id": "L/main/tulips",
+   "object": "tulips",
+   "name_ru": "Тюльпаны в вазе",
+   "name_en": "Tulips in a vase",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/tulips.svg",
+   "bbox": [
+    3036.018,
+    4712.718,
+    590.574,
+    747.106
+   ],
+   "paths": 131,
+   "colors": {
+    "#181817": 26,
+    "WHITE": 34,
+    "#F9ECB0": 30,
+    "#AA9BF0": 18,
+    "#F9A3AA": 23
+   }
+  },
+  {
+   "id": "L/main/wallet",
+   "object": "wallet",
+   "name_ru": "Кошелёк",
+   "name_en": "Wallet",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/wallet.svg",
+   "bbox": [
+    3868.258,
+    5095.109,
+    630.419,
+    396.308
+   ],
+   "paths": 86,
+   "colors": {
+    "#D7CDF5": 16,
+    "#181817": 55,
+    "#F9ECB0": 10,
+    "WHITE": 5
+   }
+  },
+  {
+   "id": "L/main/folder",
+   "object": "folder",
+   "name_ru": "Папка",
+   "name_en": "Folder",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/folder.svg",
+   "bbox": [
+    365.272,
+    5920.178,
+    1240.617,
+    658.583
+   ],
+   "paths": 22,
+   "colors": {
+    "#F9ECB0": 11,
+    "#181817": 4,
+    "WHITE": 6,
+    "#F9A3AA": 1
+   }
+  },
+  {
+   "id": "L/main/pen",
+   "object": "pen",
+   "name_ru": "Ручка",
+   "name_en": "Pen",
+   "size": "L",
+   "role": "main",
+   "file": "library/L/main/pen.svg",
+   "bbox": [
+    1795.795,
+    6127.63,
+    508.428,
+    285.401
+   ],
+   "paths": 24,
+   "colors": {
+    "#181817": 7,
+    "#D7CDF5": 1,
+    "WHITE": 14,
+    "#F9A3AA": 1,
+    "#F9ECB0": 1
+   }
+  },
+  {
+   "id": "L/background/open_book",
+   "object": "open_book",
+   "name_ru": "Открытая книга",
+   "name_en": "Open book",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/open_book.svg",
+   "bbox": [
+    391.644,
+    7491.56,
+    1445.894,
+    976.662
+   ],
+   "paths": 54,
+   "colors": {
+    "#D7CDF5": 42,
+    "#7864D7": 12
+   }
+  },
+  {
+   "id": "L/background/smartphone",
+   "object": "smartphone",
+   "name_ru": "Смартфон",
+   "name_en": "Smartphone",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/smartphone.svg",
+   "bbox": [
+    2038.578,
+    7742.823,
+    796.53,
+    461.667
+   ],
+   "paths": 155,
+   "colors": {
+    "#7864D7": 93,
+    "#D7CDF5": 62
+   }
+  },
+  {
+   "id": "L/background/puzzle",
+   "object": "puzzle",
+   "name_ru": "Детали пазла",
+   "name_en": "Puzzle pieces",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/puzzle.svg",
+   "bbox": [
+    3100.244,
+    7851.93,
+    544.164,
+    313.532
+   ],
+   "paths": 57,
+   "colors": {
+    "#7864D7": 22,
+    "#D7CDF5": 35
+   }
+  },
+  {
+   "id": "L/background/coin",
+   "object": "coin",
+   "name_ru": "Монета",
+   "name_en": "Coin",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/coin.svg",
+   "bbox": [
+    4005.301,
+    7970.0,
+    286.676,
+    188.5
+   ],
+   "paths": 136,
+   "colors": {
+    "#D7CDF5": 38,
+    "#7864D7": 98
+   }
+  },
+  {
+   "id": "L/background/headphones",
+   "object": "headphones",
+   "name_ru": "Наушники",
+   "name_en": "Headphones",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/headphones.svg",
+   "bbox": [
+    470.023,
+    8827.27,
+    888.152,
+    691.544
+   ],
+   "paths": 84,
+   "colors": {
+    "#7864D7": 20,
+    "#D7CDF5": 64
+   }
+  },
+  {
+   "id": "L/background/desk_lamp",
+   "object": "desk_lamp",
+   "name_ru": "Настольная лампа",
+   "name_en": "Desk lamp",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/desk_lamp.svg",
+   "bbox": [
+    1822.23,
+    8462.941,
+    945.945,
+    1128.984
+   ],
+   "paths": 27,
+   "colors": {
+    "#7864D7": 4,
+    "#D7CDF5": 23
+   }
+  },
+  {
+   "id": "L/background/tulips",
+   "object": "tulips",
+   "name_ru": "Тюльпаны в вазе",
+   "name_en": "Tulips in a vase",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/tulips.svg",
+   "bbox": [
+    3060.915,
+    8797.603,
+    590.569,
+    747.106
+   ],
+   "paths": 131,
+   "colors": {
+    "#7864D7": 26,
+    "#D7CDF5": 105
+   }
+  },
+  {
+   "id": "L/background/wallet",
+   "object": "wallet",
+   "name_ru": "Кошелёк",
+   "name_en": "Wallet",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/wallet.svg",
+   "bbox": [
+    3868.258,
+    9119.289,
+    630.419,
+    396.315
+   ],
+   "paths": 86,
+   "colors": {
+    "#D7CDF5": 31,
+    "#7864D7": 55
+   }
+  },
+  {
+   "id": "L/background/folder",
+   "object": "folder",
+   "name_ru": "Папка",
+   "name_en": "Folder",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/folder.svg",
+   "bbox": [
+    365.272,
+    9944.359,
+    1240.617,
+    658.614
+   ],
+   "paths": 22,
+   "colors": {
+    "#D7CDF5": 18,
+    "#7864D7": 4
+   }
+  },
+  {
+   "id": "L/background/pen",
+   "object": "pen",
+   "name_ru": "Ручка",
+   "name_en": "Pen",
+   "size": "L",
+   "role": "background",
+   "file": "library/L/background/pen.svg",
+   "bbox": [
+    1795.795,
+    10151.841,
+    508.428,
+    285.356
+   ],
+   "paths": 24,
+   "colors": {
+    "#7864D7": 7,
+    "#D7CDF5": 17
+   }
+  }
+ ]
+}

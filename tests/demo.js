@@ -1,0 +1,26 @@
+const {chromium}=require('playwright');const path=require('path');const fs=require('fs');
+const URL=process.env.URL||'http://localhost:8765/index.html';
+(async()=>{const dir=path.join(__dirname,'..','docs','_vid');fs.rmSync(dir,{recursive:true,force:true});
+const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:1400,height:820},recordVideo:{dir,size:{width:1400,height:820}},acceptDownloads:true});const p=await ctx.newPage();
+const w=ms=>p.waitForTimeout(ms);
+await p.goto(URL);await p.waitForSelector('#libGrid .libitem');await w(800);
+await p.type('#metaText','Teamwork is solving a puzzle together, with a good idea',{delay:35});await w(300);
+await p.click('#compose');await w(1800);
+await p.click('#shuffle');await w(1200);
+await p.selectOption('#layoutMode','headline');await w(1500);
+await p.click('#palettes .pal:nth-child(3)');await w(1200);
+await p.click('#palettes .pal:nth-child(2)');await w(1200);
+await p.setInputFiles('#palFile',path.join(__dirname,'..','examples','custom-palette.json'));await w(1500);
+await p.selectOption('#sizeMode','L');await w(1500);
+await p.selectOption('#layoutMode','assembled');await w(1500);
+// manual edit: drag first main item, rotate, add from library
+const it=await p.evaluate(()=>{const e=window.__app.editor;const m=e.items.filter(i=>i.role==='main').pop();const g=document.querySelector(`.item[data-uid="${m.uid}"]`);const r=g.getBoundingClientRect();
+ for(let y=r.y+r.height*0.3;y<r.y+r.height*0.9;y+=6)for(let x=r.x+r.width*0.2;x<r.x+r.width*0.9;x+=6){const el=document.elementFromPoint(x,y);if(el&&el.closest('.item')===g)return {x,y};}return null;});
+await p.mouse.move(it.x,it.y);await p.mouse.down();await p.mouse.move(it.x+90,it.y+40,{steps:15});await p.mouse.up();await w(800);
+await p.fill('#pRot','20');await p.dispatchEvent('#pRot','change');await w(1000);
+await p.click('#libGrid .libitem:nth-child(7)');await w(1200);
+await p.click('#modeTabs [data-tab=names]');await p.fill('#namesText','headphones, phone, wallet, фон: книга');await p.click('#compose');await w(1800);
+const [d]=await Promise.all([p.waitForEvent('download'),p.click('#export')]);await w(1000);
+await ctx.close();await b.close();
+const f=fs.readdirSync(dir).find(x=>x.endsWith('.webm'));fs.renameSync(path.join(dir,f),path.join(__dirname,'..','docs','demo.webm'));fs.rmSync(dir,{recursive:true});
+})();

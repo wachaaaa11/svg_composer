@@ -1,0 +1,7 @@
+{
+  "name": "Sunset (custom)",
+  "background": ["#FFE0E6", "#FFB3C7", "#C2185B"],
+  "objects": ["#FFF3B0", "#4DD0E1", "#B2EBF2"],
+  "black": "#181817",
+  "white": "#FFFFFF"
+}
